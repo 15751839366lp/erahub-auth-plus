@@ -1,3 +1,5 @@
+资源来源于 疯狂的狮子Li 的开源项目RuoYi-Cloud-Plus
+
 ## 平台简介
 
 [![码云Gitee](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/badge/star.svg?theme=blue)](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus)
