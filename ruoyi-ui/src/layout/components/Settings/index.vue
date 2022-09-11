@@ -163,6 +163,7 @@ function saveSetting() {
   };
   localStorage.setItem("layout-setting", JSON.stringify(layoutSetting));
   setTimeout(proxy.$modal.closeLoading(), 1000)
+  showSettings.value = false;
 }
 function resetSetting() {
   proxy.$modal.loading("正在清除设置缓存并刷新，请稍候...");
