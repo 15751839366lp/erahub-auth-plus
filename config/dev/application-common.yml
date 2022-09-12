@@ -237,7 +237,7 @@ swagger:
   enabled: true
   info:
     # 标题
-    title: '标题：erahub-Cloud-Plus微服务权限管理系统_接口文档'
+    title: '标题：Erahub-Plus-Auth微服务权限管理系统_接口文档'
     # 描述
     description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
     # 版本
@@ -245,8 +245,8 @@ swagger:
     # 作者信息
     contact:
       name: erahub
-      email: crazylionli@163.com
-      url: https://gitee.com/JavaLionLi/erahub-Cloud-Plus
+      email: erahub@163.com
+      url: https://gitee.com/erahub/Erahub-Plus-Auth
   components:
     # 鉴权方式配置
     security-schemes:

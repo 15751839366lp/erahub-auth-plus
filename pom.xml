@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.erahub</groupId>
-    <artifactId>erahub-cloud-plus</artifactId>
+    <artifactId>erahub-plus-auth</artifactId>
     <version>1.2.0</version>
 
-    <name>erahub-Cloud-Plus</name>
-    <url>https://gitee.com/JavaLionLi/erahub-Cloud-Plus</url>
-    <description>erahub-Cloud-Plus微服务系统</description>
+    <name>Erahub-Plus-Auth</name>
+    <url>https://gitee.com/Erahub-Plus-Auth</url>
+    <description>Erahub-Plus-Auth微服务系统</description>
 
     <properties>
         <erahub.version>1.2.0</erahub.version>

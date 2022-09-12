@@ -61,20 +61,20 @@
             type="primary"
             icon="Cloudy"
             plain
-            @click="goTarget('https://gitee.com/JavaLionLi/erahub-Cloud-Plus')"
+            @click="goTarget('https://gitee.com/Erahub-Plus-Auth')"
             >访问码云</el-button
           >
           <el-button
             icon="HomeFilled"
             plain
-            @click="goTarget('https://gitee.com/JavaLionLi/erahub-Cloud-Plus')"
+            @click="goTarget('https://gitee.com/Erahub-Plus-Auth')"
             >访问主页</el-button
           >
           <el-button
               type="primary"
               icon="Cloudy"
               plain
-              @click="goTarget('https://gitee.com/JavaLionLi/erahub-Cloud-Plus/wikis/pages?sort_id=5303316&doc_id=2056143')"
+              @click="goTarget('https://gitee.com/Erahub-Plus-Auth/wikis/pages?sort_id=5303316&doc_id=2056143')"
           >更新日志</el-button
           >
         </p>
@@ -124,9 +124,9 @@
           <div class="body">
             <p>
               <i class="el-icon-s-promotion"></i> 官网：<el-link
-                href="https://gitee.com/JavaLionLi/erahub-Cloud-Plus"
+                href="https://gitee.com/Erahub-Plus-Auth"
                 target="_blank"
-                >https://gitee.com/JavaLionLi/erahub-Cloud-Plus</el-link
+                >https://gitee.com/Erahub-Plus-Auth</el-link
               >
             </p>
           </div>

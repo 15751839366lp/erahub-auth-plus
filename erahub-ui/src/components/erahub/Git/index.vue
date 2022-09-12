@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-const url = ref('https://gitee.com/JavaLionLi/erahub-Cloud-Plus');
+const url = ref('https://gitee.com/Erahub-Plus-Auth');
 
 function goto() {
   window.open(url.value)
