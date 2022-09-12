@@ -54,7 +54,7 @@ dubbo:
     check: false
   scan:
     # 接口实现类扫描
-    base-packages: com.ruoyi.**.dubbo
+    base-packages: com.erahub.**.dubbo
   # 自定义配置
   custom:
     # 全局请求log
@@ -196,11 +196,11 @@ sa-token:
 mybatis-plus:
   # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
   # 例如 com.**.**.mapper
-  mapperPackage: com.ruoyi.**.mapper
+  mapperPackage: com.erahub.**.mapper
   # 对应的 XML 文件位置
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.ruoyi.**.domain
+  typeAliasesPackage: com.erahub.**.domain
   # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
   checkConfigLocation: false
   configuration:
@@ -237,16 +237,16 @@ swagger:
   enabled: true
   info:
     # 标题
-    title: '标题：RuoYi-Cloud-Plus微服务权限管理系统_接口文档'
+    title: '标题：erahub-Cloud-Plus微服务权限管理系统_接口文档'
     # 描述
     description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
     # 版本
     version: '版本号：系统版本...'
     # 作者信息
     contact:
-      name: Lion Li
+      name: erahub
       email: crazylionli@163.com
-      url: https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus
+      url: https://gitee.com/JavaLionLi/erahub-Cloud-Plus
   components:
     # 鉴权方式配置
     security-schemes:
@@ -257,7 +257,7 @@ swagger:
   # 服务文档路径映射 参考 gateway router 配置
   # 默认为服务名去除前缀转换为path 此处填特殊的配置
   service-mapping:
-    ruoyi-gen: /code
+    erahub-gen: /code
 
 # seata配置
 seata:
@@ -277,7 +277,7 @@ seata:
   registry:
     type: nacos
     nacos:
-      application: ruoyi-seata-server
+      application: erahub-seata-server
       server-addr: ${spring.cloud.nacos.server-addr}
       group: ${spring.cloud.nacos.discovery.group}
       namespace: ${spring.profiles.active}

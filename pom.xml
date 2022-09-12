@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ruoyi</groupId>
-    <artifactId>ruoyi-cloud-plus</artifactId>
+    <groupId>com.erahub</groupId>
+    <artifactId>erahub-cloud-plus</artifactId>
     <version>1.2.0</version>
 
-    <name>RuoYi-Cloud-Plus</name>
-    <url>https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus</url>
-    <description>RuoYi-Cloud-Plus微服务系统</description>
+    <name>erahub-Cloud-Plus</name>
+    <url>https://gitee.com/JavaLionLi/erahub-Cloud-Plus</url>
+    <description>erahub-Cloud-Plus微服务系统</description>
 
     <properties>
-        <ruoyi.version>1.2.0</ruoyi.version>
+        <erahub.version>1.2.0</erahub.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -56,7 +56,7 @@
         <!-- docker 配置 -->
         <docker.registry.url>localhost</docker.registry.url>
         <docker.registry.host>http://${docker.registry.url}:2375</docker.registry.host>
-        <docker.namespace>ruoyi</docker.namespace>
+        <docker.namespace>erahub</docker.namespace>
         <docker.plugin.version>1.2.2</docker.plugin.version>
     </properties>
 
@@ -103,9 +103,9 @@
 
             <!-- SpringCloud Alibaba 微服务 -->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-common-alibaba-bom</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.erahub</groupId>
+                <artifactId>erahub-common-alibaba-bom</artifactId>
+                <version>${erahub.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -130,18 +130,18 @@
 
             <!-- common 的依赖配置-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-common-bom</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.erahub</groupId>
+                <artifactId>erahub-common-bom</artifactId>
+                <version>${erahub.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
             <!-- api 的依赖配置-->
             <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>ruoyi-api-bom</artifactId>
-                <version>${ruoyi.version}</version>
+                <groupId>com.erahub</groupId>
+                <artifactId>erahub-api-bom</artifactId>
+                <version>${erahub.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -321,13 +321,13 @@
     </dependencyManagement>
 
     <modules>
-        <module>ruoyi-auth</module>
-        <module>ruoyi-gateway</module>
-        <module>ruoyi-visual</module>
-        <module>ruoyi-modules</module>
-        <module>ruoyi-api</module>
-        <module>ruoyi-common</module>
-        <module>ruoyi-example</module>
+        <module>erahub-auth</module>
+        <module>erahub-gateway</module>
+        <module>erahub-visual</module>
+        <module>erahub-modules</module>
+        <module>erahub-api</module>
+        <module>erahub-common</module>
+        <module>erahub-example</module>
     </modules>
     <packaging>pom</packaging>
 

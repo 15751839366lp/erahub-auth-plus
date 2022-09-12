@@ -8,9 +8,9 @@ services:
       # 时区上海
       TZ: Asia/Shanghai
       # root 密码
-      MYSQL_ROOT_PASSWORD: ruoyi123
+      MYSQL_ROOT_PASSWORD: 123456
       # 初始化数据库
-      MYSQL_DATABASE: ry-cloud
+      MYSQL_DATABASE: erahub-cloud
     ports:
       - "3306:3306"
     volumes:
@@ -42,8 +42,8 @@ services:
       MYSQL_SERVICE_HOST: 127.0.0.1
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
-      MYSQL_SERVICE_PASSWORD: ruoyi123
-      MYSQL_SERVICE_DB_NAME: ry-config
+      MYSQL_SERVICE_PASSWORD: 123456
+      MYSQL_SERVICE_DB_NAME: erahub-config
       MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
     volumes:
       - /docker/nacos/logs/:/home/nacos/logs
@@ -80,9 +80,9 @@ services:
       # 时区上海
       TZ: Asia/Shanghai
       # 管理后台用户名
-      MINIO_ACCESS_KEY: ruoyi
+      MINIO_ACCESS_KEY: erahub
       # 管理后台密码，最小8个字符
-      MINIO_SECRET_KEY: ruoyi123
+      MINIO_SECRET_KEY: erahub123
       # https需要指定域名
       MINIO_SERVER_URL: ""
       # 开启压缩 on 开启 off 关闭
@@ -101,7 +101,7 @@ services:
     network_mode: "host"
 
   seata-server:
-    image: ruoyi/ruoyi-seata-server:1.2.0
+    image: erahub/erahub-seata-server:1.2.0
     container_name: seata-server
     ports:
       - "7091:7091"
@@ -112,7 +112,7 @@ services:
       # SEATA_IP: 127.0.0.1
       SEATA_PORT: 8091
     volumes:
-      - /docker/ruoyi-seata-server/logs/:/ruoyi/seata-server/logs
+      - /docker/erahub-seata-server/logs/:/erahub/seata-server/logs
     privileged: true
     network_mode: "host"
 
@@ -138,7 +138,7 @@ services:
     network_mode: "host"
 
   sentinel:
-    image: ruoyi/ruoyi-sentinel-dashboard:1.2.0
+    image: erahub/erahub-sentinel-dashboard:1.2.0
     container_name: sentinel
     environment:
       TZ: Asia/Shanghai
@@ -146,13 +146,13 @@ services:
       - "8718:8718"
     volumes:
       # 配置文件
-      - /docker/ruoyi-sentinel-dashboard/logs/:/ruoyi/sentinel-dashboard/logs
+      - /docker/erahub-sentinel-dashboard/logs/:/erahub/sentinel-dashboard/logs
     restart: always
     network_mode: "host"
 
-  ruoyi-monitor-admin:
-    image: ruoyi/ruoyi-monitor:1.2.0
-    container_name: ruoyi-monitor
+  erahub-monitor-admin:
+    image: erahub/erahub-monitor:1.2.0
+    container_name: erahub-monitor
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -160,13 +160,13 @@ services:
       - "9100:9100"
     volumes:
       # 配置文件
-      - /docker/ruoyi-monitor/logs/:/ruoyi/monitor/logs
+      - /docker/erahub-monitor/logs/:/erahub/monitor/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-xxl-job-admin:
-    image: ruoyi/ruoyi-xxl-job-admin:1.2.0
-    container_name: ruoyi-xxl-job-admin
+  erahub-xxl-job-admin:
+    image: erahub/erahub-xxl-job-admin:1.2.0
+    container_name: erahub-xxl-job-admin
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -174,13 +174,13 @@ services:
       - "9900:9900"
     volumes:
       # 配置文件
-      - /docker/ruoyi-xxl-job-admin/logs/:/ruoyi/xxl-job-admin/logs
+      - /docker/erahub-xxl-job-admin/logs/:/erahub/xxl-job-admin/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-gateway:
-    image: ruoyi/ruoyi-gateway:1.2.0
-    container_name: ruoyi-gateway
+  erahub-gateway:
+    image: erahub/erahub-gateway:1.2.0
+    container_name: erahub-gateway
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -188,13 +188,13 @@ services:
       - "8080:8080"
     volumes:
       # 配置文件
-      - /docker/ruoyi-gateway/logs/:/ruoyi/gateway/logs
+      - /docker/erahub-gateway/logs/:/erahub/gateway/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-auth:
-    image: ruoyi/ruoyi-auth:1.2.0
-    container_name: ruoyi-auth
+  erahub-auth:
+    image: erahub/erahub-auth:1.2.0
+    container_name: erahub-auth
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -202,13 +202,13 @@ services:
       - "9200:9200"
     volumes:
       # 配置文件
-      - /docker/ruoyi-auth/logs/:/ruoyi/auth/logs
+      - /docker/erahub-auth/logs/:/erahub/auth/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-system:
-    image: ruoyi/ruoyi-system:1.2.0
-    container_name: ruoyi-system
+  erahub-system:
+    image: erahub/erahub-system:1.2.0
+    container_name: erahub-system
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -216,13 +216,13 @@ services:
       - "9201:9201"
     volumes:
       # 配置文件
-      - /docker/ruoyi-system/logs/:/ruoyi/system/logs
+      - /docker/erahub-system/logs/:/erahub/system/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-gen:
-    image: ruoyi/ruoyi-gen:1.2.0
-    container_name: ruoyi-gen
+  erahub-gen:
+    image: erahub/erahub-gen:1.2.0
+    container_name: erahub-gen
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -230,13 +230,13 @@ services:
       - "9202:9202"
     volumes:
       # 配置文件
-      - /docker/ruoyi-gen/logs/:/ruoyi/gen/logs
+      - /docker/erahub-gen/logs/:/erahub/gen/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-job:
-    image: ruoyi/ruoyi-job:1.2.0
-    container_name: ruoyi-job
+  erahub-job:
+    image: erahub/erahub-job:1.2.0
+    container_name: erahub-job
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -244,13 +244,13 @@ services:
       - "9203:9203"
     volumes:
       # 配置文件
-      - /docker/ruoyi-job/logs/:/ruoyi/job/logs
+      - /docker/erahub-job/logs/:/erahub/job/logs
     privileged: true
     network_mode: "host"
 
-  ruoyi-resource:
-    image: ruoyi/ruoyi-resource:1.2.0
-    container_name: ruoyi-resource
+  erahub-resource:
+    image: erahub/erahub-resource:1.2.0
+    container_name: erahub-resource
     environment:
       # 时区上海
       TZ: Asia/Shanghai
@@ -258,7 +258,7 @@ services:
       - "9300:9300"
     volumes:
       # 配置文件
-      - /docker/ruoyi-resource/logs/:/ruoyi/resource/logs
+      - /docker/erahub-resource/logs/:/erahub/resource/logs
     privileged: true
     network_mode: "host"
 
@@ -361,8 +361,8 @@ services:
     build:
       context: ./rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: ruoyi
-      RABBITMQ_DEFAULT_PASS: ruoyi123
+      RABBITMQ_DEFAULT_USER: erahub
+      RABBITMQ_DEFAULT_PASS: erahub123
     ports:
       - "15672:15672" # 管理界面端口
       - "5672:5672"   # api 端口
@@ -395,7 +395,7 @@ services:
       # 监听端口
       KAFKA_CFG_LISTENERS: PLAINTEXT://:9092
       # 实际访问ip 本地用 127 内网用 192 外网用 外网ip
-      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://192.168.31.165:9092
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://192.168.56.10:9092
       KAFKA_CFG_ZOOKEEPER_CONNECT: 127.0.0.1:2181
       ALLOW_PLAINTEXT_LISTENER: "yes"
     volumes:
@@ -412,8 +412,8 @@ services:
     environment:
       ZK_HOSTS: 127.0.0.1:2181
       APPLICATION_SECRET: letmein
-      KAFKA_MANAGER_USERNAME: ruoyi
-      KAFKA_MANAGER_PASSWORD: ruoyi123
+      KAFKA_MANAGER_USERNAME: erahub
+      KAFKA_MANAGER_PASSWORD: erahub123
       KM_ARGS: -Dhttp.port=19092
     depends_on:
       - kafka

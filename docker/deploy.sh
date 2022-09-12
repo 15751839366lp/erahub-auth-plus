@@ -96,17 +96,17 @@ base(){
 
 #启动监控模块
 monitor(){
-    docker-compose up -d ruoyi-monitor-admin sentinel ruoyi-xxl-job-admin
+    docker-compose up -d erahub-monitor-admin sentinel erahub-xxl-job-admin
 }
 
 #启动程序模块
 start(){
-    docker-compose up -d ruoyi-gateway ruoyi-gen ruoyi-auth ruoyi-system ruoyi-resource
+    docker-compose up -d erahub-gateway erahub-gen erahub-auth erahub-system erahub-resource
 }
 
 #停止程序模块
 stop(){
-    docker-compose stop ruoyi-gateway ruoyi-gen ruoyi-auth ruoyi-system ruoyi-resource
+    docker-compose stop erahub-gateway erahub-gen erahub-auth erahub-system erahub-resource
 }
 
 #关闭所有模块
