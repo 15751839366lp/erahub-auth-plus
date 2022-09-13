@@ -8,7 +8,7 @@ services:
       # 时区上海
       TZ: Asia/Shanghai
       # root 密码
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: erahub123
       # 初始化数据库
       MYSQL_DATABASE: erahub-cloud
     ports:
@@ -38,11 +38,17 @@ services:
     environment:
       TZ: Asia/Shanghai
       MODE: standalone
+      # 注意服务器配置防止内存溢出
+      #JVM_XMS: 64m   #-Xms default :1g
+      #JVM_XMX: 64m   #-Xmx default :1g
+      #JVM_XMN: 16m   #-Xmn default :512m
+      #JVM_MS: 8m     #-XX:MetaspaceSize default :128m
+      #JVM_MMS: 8m    #-XX:MaxMetaspaceSize default :320
       SPRING_DATASOURCE_PLATFORM: mysql
       MYSQL_SERVICE_HOST: 127.0.0.1
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
-      MYSQL_SERVICE_PASSWORD: 123456
+      MYSQL_SERVICE_PASSWORD: erahub123
       MYSQL_SERVICE_DB_NAME: erahub-config
       MYSQL_SERVICE_DB_PARAM: characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
     volumes:
@@ -147,7 +153,7 @@ services:
     volumes:
       # 配置文件
       - /docker/erahub-sentinel-dashboard/logs/:/erahub/sentinel-dashboard/logs
-    restart: always
+    privileged: true
     network_mode: "host"
 
   erahub-monitor-admin:
