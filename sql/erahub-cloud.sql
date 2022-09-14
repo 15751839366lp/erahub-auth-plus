@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql_lp
+ Source Server         : mysql-10
  Source Server Type    : MySQL
- Source Server Version : 80026
- Source Host           : localhost:3306
+ Source Server Version : 80029
+ Source Host           : 192.168.56.10:3306
  Source Schema         : erahub-cloud
 
  Target Server Type    : MySQL
- Target Server Version : 80026
+ Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 12/09/2022 08:56:03
+ Date: 14/09/2022 18:05:46
 */
 
 SET NAMES utf8mb4;
@@ -252,6 +252,15 @@ CREATE TABLE `sys_logininfor`  (
 INSERT INTO `sys_logininfor` VALUES (1568761479632216065, 'admin', '127.0.0.1', '0', '登录成功', '2022-09-11 08:40:58');
 INSERT INTO `sys_logininfor` VALUES (1568778836857548802, 'admin', '127.0.0.1', '0', '登录成功', '2022-09-11 09:49:56');
 INSERT INTO `sys_logininfor` VALUES (1568894461747609601, 'admin', '127.0.0.1', '0', '登录成功', '2022-09-11 17:29:23');
+INSERT INTO `sys_logininfor` VALUES (1569922581813710850, 'admin', '192.168.56.1', '1', '密码输入错误1次', '2022-09-14 13:34:46');
+INSERT INTO `sys_logininfor` VALUES (1569922635735683074, 'admin', '192.168.56.1', '1', '密码输入错误2次', '2022-09-14 13:34:59');
+INSERT INTO `sys_logininfor` VALUES (1569922688445501441, 'admin', '192.168.56.1', '1', '密码输入错误3次', '2022-09-14 13:35:11');
+INSERT INTO `sys_logininfor` VALUES (1569922834675716097, 'admin', '192.168.56.1', '0', '登录成功', '2022-09-14 13:35:46');
+INSERT INTO `sys_logininfor` VALUES (1569923013617307650, 'admin', '192.168.56.1', '0', '退出成功', '2022-09-14 13:36:29');
+INSERT INTO `sys_logininfor` VALUES (1569923035603849218, 'admin', '192.168.56.1', '1', '密码输入错误1次', '2022-09-14 13:36:34');
+INSERT INTO `sys_logininfor` VALUES (1569923223525445634, 'admin', '192.168.56.1', '0', '登录成功', '2022-09-14 13:37:19');
+INSERT INTO `sys_logininfor` VALUES (1569923326910844929, 'admin', '192.168.56.1', '0', '退出成功', '2022-09-14 13:37:44');
+INSERT INTO `sys_logininfor` VALUES (1569923350684160001, 'admin', '192.168.56.1', '0', '登录成功', '2022-09-14 13:37:49');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -298,10 +307,10 @@ INSERT INTO `sys_menu` VALUES (106, '参数设置', 1, 7, 'config', 'system/conf
 INSERT INTO `sys_menu` VALUES (107, '通知公告', 1, 8, 'notice', 'system/notice/index', '', 1, 0, 'C', '0', '0', 'system:notice:list', 'message', 'admin', '2022-09-10 17:10:48', '', NULL, '通知公告菜单');
 INSERT INTO `sys_menu` VALUES (108, '日志管理', 1, 9, 'log', '', '', 1, 0, 'M', '0', '0', '', 'log', 'admin', '2022-09-10 17:10:48', '', NULL, '日志管理菜单');
 INSERT INTO `sys_menu` VALUES (109, '在线用户', 2, 1, 'online', 'monitor/online/index', '', 1, 0, 'C', '0', '0', 'monitor:online:list', 'online', 'admin', '2022-09-10 17:10:48', '', NULL, '在线用户菜单');
-INSERT INTO `sys_menu` VALUES (110, 'XxlJob控制台', 2, 2, 'http://localhost:9900', '', '', 0, 0, 'C', '0', '0', 'monitor:job:list', 'job', 'admin', '2022-09-10 17:10:48', '', NULL, '定时任务菜单');
-INSERT INTO `sys_menu` VALUES (111, 'Sentinel控制台', 2, 3, 'http://localhost:8718', '', '', 0, 0, 'C', '0', '0', 'monitor:sentinel:list', 'sentinel', 'admin', '2022-09-10 17:10:48', '', NULL, '流量控制菜单');
-INSERT INTO `sys_menu` VALUES (112, 'Nacos控制台', 2, 4, 'http://localhost:8848/nacos', '', '', 0, 0, 'C', '0', '0', 'monitor:nacos:list', 'nacos', 'admin', '2022-09-10 17:10:48', '', NULL, '服务治理菜单');
-INSERT INTO `sys_menu` VALUES (113, 'Admin控制台', 2, 5, 'http://localhost:9100/login', '', '', 0, 0, 'C', '0', '0', 'monitor:server:list', 'server', 'admin', '2022-09-10 17:10:48', '', NULL, '服务监控菜单');
+INSERT INTO `sys_menu` VALUES (110, 'XxlJob控制台', 2, 2, 'http://192.168.56.10:9900', '', '', 0, 0, 'C', '0', '0', 'monitor:job:list', 'job', 'admin', '2022-09-10 17:10:48', 'admin', '2022-09-14 13:40:52', '定时任务菜单');
+INSERT INTO `sys_menu` VALUES (111, 'Sentinel控制台', 2, 3, 'http://192.168.56.10:8718', '', '', 0, 0, 'C', '0', '0', 'monitor:sentinel:list', 'sentinel', 'admin', '2022-09-10 17:10:48', 'admin', '2022-09-14 13:40:59', '流量控制菜单');
+INSERT INTO `sys_menu` VALUES (112, 'Nacos控制台', 2, 4, 'http://192.168.56.10:8848/nacos', '', '', 0, 0, 'C', '0', '0', 'monitor:nacos:list', 'nacos', 'admin', '2022-09-10 17:10:48', 'admin', '2022-09-14 13:41:02', '服务治理菜单');
+INSERT INTO `sys_menu` VALUES (113, 'Admin控制台', 2, 5, 'http://192.168.56.10:9100/login', '', '', 0, 0, 'C', '0', '0', 'monitor:server:list', 'server', 'admin', '2022-09-10 17:10:48', 'admin', '2022-09-14 13:41:06', '服务监控菜单');
 INSERT INTO `sys_menu` VALUES (114, '表单构建', 3, 1, 'build', 'tool/build/index', '', 1, 0, 'C', '0', '0', 'tool:build:list', 'build', 'admin', '2022-09-10 17:10:48', '', NULL, '表单构建菜单');
 INSERT INTO `sys_menu` VALUES (115, '代码生成', 3, 2, 'gen', 'tool/gen/index', '', 1, 0, 'C', '0', '0', 'tool:gen:list', 'code', 'admin', '2022-09-10 17:10:48', '', NULL, '代码生成菜单');
 INSERT INTO `sys_menu` VALUES (118, '文件管理', 1, 10, 'oss', 'system/oss/index', '', 1, 0, 'C', '0', '0', 'system:oss:list', 'upload', 'admin', '2022-09-10 17:10:48', '', NULL, '文件管理菜单');
@@ -448,6 +457,13 @@ INSERT INTO `sys_oper_log` VALUES (1568770564888944641, '用户管理', 5, 'cont
 INSERT INTO `sys_oper_log` VALUES (1568779241930846209, '代码生成', 6, 'com.erahub.gen.controller.GenController.importTableSave()', 'POST', 1, 'admin', '', '/gen/importTable', '127.0.0.1', '', '\"test_demo\"', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-11 09:51:32');
 INSERT INTO `sys_oper_log` VALUES (1568779340157251585, '代码生成', 3, 'com.erahub.gen.controller.GenController.remove()', 'DELETE', 1, 'admin', '', '/gen/1568779241301643266', '127.0.0.1', '', '', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-11 09:51:56');
 INSERT INTO `sys_oper_log` VALUES (1568898673483137025, '参数管理', 9, 'controller.com.erahub.system.SysConfigController.refreshCache()', 'DELETE', 1, 'admin', '', '/config/refreshCache', '127.0.0.1', '', '', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-11 17:46:07');
+INSERT INTO `sys_oper_log` VALUES (1569922948261662722, '用户管理', 1, 'com.erahub.system.controller.SysUserController.add()', 'POST', 1, 'admin', '', '/user', '192.168.56.1', '', '{\"searchValue\":null,\"createBy\":\"admin\",\"createTime\":\"2022-09-14 13:36:13\",\"updateBy\":\"admin\",\"updateTime\":\"2022-09-14 13:36:13\",\"params\":{},\"userId\":\"1569922947313750018\",\"deptId\":null,\"userName\":\"test01\",\"nickName\":\"test01\",\"userType\":null,\"email\":null,\"phonenumber\":null,\"sex\":null,\"avatar\":null,\"status\":\"0\",\"delFlag\":null,\"loginIp\":null,\"loginDate\":null,\"remark\":null,\"dept\":null,\"roles\":null,\"roleIds\":[],\"postIds\":[],\"roleId\":null,\"admin\":false}', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:36:13');
+INSERT INTO `sys_oper_log` VALUES (1569923307520577538, '个人信息', 2, 'com.erahub.system.controller.SysProfileController.updatePwd()', 'PUT', 1, 'admin', '', '/user/profile/updatePwd', '192.168.56.1', '', '\"erahub123\" \"123456\"', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:37:39');
+INSERT INTO `sys_oper_log` VALUES (1569924119403614209, '菜单管理', 2, 'com.erahub.system.controller.SysMenuController.edit()', 'PUT', 1, 'admin', '', '/menu', '192.168.56.1', '', '{\"searchValue\":null,\"createBy\":\"admin\",\"createTime\":\"2022-09-10 17:10:48\",\"updateBy\":\"admin\",\"updateTime\":\"2022-09-14 13:40:52\",\"params\":{},\"parentName\":null,\"parentId\":2,\"children\":[],\"menuId\":110,\"menuName\":\"XxlJob控制台\",\"orderNum\":2,\"path\":\"http://192.168.56.10:9900\",\"component\":\"\",\"queryParam\":\"\",\"isFrame\":\"0\",\"isCache\":\"0\",\"menuType\":\"C\",\"visible\":\"0\",\"status\":\"0\",\"perms\":\"monitor:job:list\",\"icon\":\"job\",\"remark\":\"定时任务菜单\"}', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:40:53');
+INSERT INTO `sys_oper_log` VALUES (1569924145345384449, '菜单管理', 2, 'com.erahub.system.controller.SysMenuController.edit()', 'PUT', 1, 'admin', '', '/menu', '192.168.56.1', '', '{\"searchValue\":null,\"createBy\":\"admin\",\"createTime\":\"2022-09-10 17:10:48\",\"updateBy\":\"admin\",\"updateTime\":\"2022-09-14 13:40:58\",\"params\":{},\"parentName\":null,\"parentId\":2,\"children\":[],\"menuId\":111,\"menuName\":\"Sentinel控制台\",\"orderNum\":3,\"path\":\"http://192.168.56.10:8718\",\"component\":\"\",\"queryParam\":\"\",\"isFrame\":\"0\",\"isCache\":\"0\",\"menuType\":\"C\",\"visible\":\"0\",\"status\":\"0\",\"perms\":\"monitor:sentinel:list\",\"icon\":\"sentinel\",\"remark\":\"流量控制菜单\"}', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:40:59');
+INSERT INTO `sys_oper_log` VALUES (1569924159882842114, '菜单管理', 2, 'com.erahub.system.controller.SysMenuController.edit()', 'PUT', 1, 'admin', '', '/menu', '192.168.56.1', '', '{\"searchValue\":null,\"createBy\":\"admin\",\"createTime\":\"2022-09-10 17:10:48\",\"updateBy\":\"admin\",\"updateTime\":\"2022-09-14 13:41:02\",\"params\":{},\"parentName\":null,\"parentId\":2,\"children\":[],\"menuId\":112,\"menuName\":\"Nacos控制台\",\"orderNum\":4,\"path\":\"http://192.168.56.10:8848/nacos\",\"component\":\"\",\"queryParam\":\"\",\"isFrame\":\"0\",\"isCache\":\"0\",\"menuType\":\"C\",\"visible\":\"0\",\"status\":\"0\",\"perms\":\"monitor:nacos:list\",\"icon\":\"nacos\",\"remark\":\"服务治理菜单\"}', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:41:02');
+INSERT INTO `sys_oper_log` VALUES (1569924174466437122, '菜单管理', 2, 'com.erahub.system.controller.SysMenuController.edit()', 'PUT', 1, 'admin', '', '/menu', '192.168.56.1', '', '{\"searchValue\":null,\"createBy\":\"admin\",\"createTime\":\"2022-09-10 17:10:48\",\"updateBy\":\"admin\",\"updateTime\":\"2022-09-14 13:41:05\",\"params\":{},\"parentName\":null,\"parentId\":2,\"children\":[],\"menuId\":113,\"menuName\":\"Admin控制台\",\"orderNum\":5,\"path\":\"http://192.168.56.10:9100/login\",\"component\":\"\",\"queryParam\":\"\",\"isFrame\":\"0\",\"isCache\":\"0\",\"menuType\":\"C\",\"visible\":\"0\",\"status\":\"0\",\"perms\":\"monitor:server:list\",\"icon\":\"server\",\"remark\":\"服务监控菜单\"}', '{\"code\":200,\"msg\":\"操作成功\",\"data\":null}', 0, '', '2022-09-14 13:41:06');
+INSERT INTO `sys_oper_log` VALUES (1569924592760180738, 'OSS对象存储', 1, 'com.erahub.resource.controller.SysOssController.upload()', 'POST', 1, 'admin', '', '/oss/upload', '192.168.56.1', '', '', '{\"code\":200,\"msg\":\"操作成功\",\"data\":{\"ossId\":\"1569924591430586369\",\"url\":\"http://127.0.0.1:9000/erahub/2022/09/14/6429fcfb2eba4fa193ffa4075017f426.pdf\",\"fileName\":\"谷粒商城-分布式基础-图.pdf\"}}', 0, '', '2022-09-14 13:42:45');
 
 -- ----------------------------
 -- Table structure for sys_oss
@@ -470,6 +486,7 @@ CREATE TABLE `sys_oss`  (
 -- ----------------------------
 -- Records of sys_oss
 -- ----------------------------
+INSERT INTO `sys_oss` VALUES (1569924591430586369, '2022/09/14/6429fcfb2eba4fa193ffa4075017f426.pdf', '谷粒商城-分布式基础-图.pdf', '.pdf', 'http://127.0.0.1:9000/erahub/2022/09/14/6429fcfb2eba4fa193ffa4075017f426.pdf', '2022-09-14 13:42:45', 'admin', '2022-09-14 13:42:45', 'admin', 'minio');
 
 -- ----------------------------
 -- Table structure for sys_oss_config
@@ -789,10 +806,11 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 103, 'admin', '疯狂的狮子Li', 'sys_user', 'crazyLionLi@163.com', '15888888888', '1', '', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', '2022-09-10 17:10:48', 'admin', '2022-09-10 17:10:48', '', NULL, '管理员');
+INSERT INTO `sys_user` VALUES (1, 103, 'admin', '疯狂的狮子Li', 'sys_user', 'crazyLionLi@163.com', '15888888888', '1', '', '$2a$10$BKgA2PpaDZdyRRDxD70oOu/eSo6oxTPehMmRHP.o3d7DnuyJWSpk2', '0', '0', '127.0.0.1', '2022-09-10 17:10:48', 'admin', '2022-09-10 17:10:48', '', NULL, '管理员');
 INSERT INTO `sys_user` VALUES (2, 105, 'lionli', '疯狂的狮子Li', 'sys_user', 'crazyLionLi@qq.com', '15666666666', '1', '', '$2a$10$7JB720yubVSZvUI0rEqK/.VqGOZTH.ulu33dHOiBE8ByOhJIrdAu2', '0', '0', '127.0.0.1', '2022-09-10 17:10:48', 'admin', '2022-09-10 17:10:48', '', NULL, '测试员');
 INSERT INTO `sys_user` VALUES (3, 108, 'test', '本部门及以下 密码666666', 'sys_user', '', '', '0', '', '$2a$10$b8yUzN0C71sbz.PhNOCgJe.Tu1yWC3RNrTyjSQ8p1W0.aaUXUJ.Ne', '0', '0', '127.0.0.1', '2022-09-10 17:10:57', 'admin', '2022-09-10 17:10:57', 'admin', '2022-09-11 08:41:22', NULL);
 INSERT INTO `sys_user` VALUES (4, 102, 'test1', '仅本人 密码666666', 'sys_user', '', '', '0', '', '$2a$10$b8yUzN0C71sbz.PhNOCgJe.Tu1yWC3RNrTyjSQ8p1W0.aaUXUJ.Ne', '0', '0', '127.0.0.1', '2022-09-10 17:10:57', 'admin', '2022-09-10 17:10:57', 'test1', '2022-09-10 17:10:57', NULL);
+INSERT INTO `sys_user` VALUES (1569922947313750018, NULL, 'test01', 'test01', 'sys_user', '', '', '0', '', '$2a$10$.zMjVmzHInj0/PJS9/AFq.r1v/21mgMRNA..zkIXZ9tBDflCqp9iy', '0', '0', '', NULL, 'admin', '2022-09-14 13:36:13', 'admin', '2022-09-14 13:36:13', NULL);
 
 -- ----------------------------
 -- Table structure for sys_user_post

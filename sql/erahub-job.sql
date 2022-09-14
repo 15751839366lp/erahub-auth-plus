@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql_lp
+ Source Server         : mysql-10
  Source Server Type    : MySQL
- Source Server Version : 80026
- Source Host           : localhost:3306
+ Source Server Version : 80029
+ Source Host           : 192.168.56.10:3306
  Source Schema         : erahub-job
 
  Target Server Type    : MySQL
- Target Server Version : 80026
+ Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 12/09/2022 08:56:15
+ Date: 14/09/2022 18:06:01
 */
 
 SET NAMES utf8mb4;
@@ -53,7 +53,7 @@ CREATE TABLE `xxl_job_group`  (
 -- ----------------------------
 -- Records of xxl_job_group
 -- ----------------------------
-INSERT INTO `xxl_job_group` VALUES (1, 'erahub-job-executor', '示例执行器', 0, 'http://192.168.56.1:9901/', '2022-09-11 18:08:31');
+INSERT INTO `xxl_job_group` VALUES (1, 'erahub-job-executor', '示例执行器', 0, NULL, '2022-09-14 13:43:09');
 
 -- ----------------------------
 -- Table structure for xxl_job_info
@@ -149,7 +149,7 @@ CREATE TABLE `xxl_job_log_report`  (
   `update_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `i_trigger_day`(`trigger_day`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of xxl_job_log_report
@@ -158,6 +158,9 @@ INSERT INTO `xxl_job_log_report` VALUES (1, '2022-09-10 00:00:00', 0, 0, 0, NULL
 INSERT INTO `xxl_job_log_report` VALUES (2, '2022-09-09 00:00:00', 0, 0, 0, NULL);
 INSERT INTO `xxl_job_log_report` VALUES (3, '2022-09-08 00:00:00', 0, 0, 0, NULL);
 INSERT INTO `xxl_job_log_report` VALUES (4, '2022-09-11 00:00:00', 0, 0, 0, NULL);
+INSERT INTO `xxl_job_log_report` VALUES (5, '2022-09-13 00:00:00', 0, 0, 0, NULL);
+INSERT INTO `xxl_job_log_report` VALUES (6, '2022-09-12 00:00:00', 0, 0, 0, NULL);
+INSERT INTO `xxl_job_log_report` VALUES (7, '2022-09-14 00:00:00', 0, 0, 0, NULL);
 
 -- ----------------------------
 -- Table structure for xxl_job_logglue

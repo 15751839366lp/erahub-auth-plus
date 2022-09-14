@@ -39,9 +39,9 @@ services:
       TZ: Asia/Shanghai
       MODE: standalone
       # 注意服务器配置防止内存溢出
-      #JVM_XMS: 64m   #-Xms default :1g
-      #JVM_XMX: 64m   #-Xmx default :1g
-      #JVM_XMN: 16m   #-Xmn default :512m
+      JVM_XMS: 512m   #-Xms default :1g
+      JVM_XMX: 512m   #-Xmx default :1g
+      JVM_XMN: 256m   #-Xmn default :512m
       #JVM_MS: 8m     #-XX:MetaspaceSize default :128m
       #JVM_MMS: 8m    #-XX:MaxMetaspaceSize default :320
       SPRING_DATASOURCE_PLATFORM: mysql
