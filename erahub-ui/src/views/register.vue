@@ -68,10 +68,7 @@
         </div>
       </el-form-item>
     </el-form>
-    <!--  底部  -->
-    <div class="el-register-footer">
-      <span>Copyright © 2018-2022 erahub.vip All Rights Reserved.</span>
-    </div>
+
   </div>
 </template>
 
@@ -142,13 +139,13 @@ function handleRegister() {
 }
 
 function getCode() {
-  getCodeImg().then(res => {
-    captchaEnabled.value = res.captchaEnabled === undefined ? true : res.captchaEnabled;
-    if (captchaEnabled.value) {
-      codeUrl.value = "data:image/gif;base64," + res.img;
-      registerForm.value.uuid = res.uuid;
-    }
-  });
+    getCodeImg().then(res => {
+        captchaEnabled.value = res.data.captchaEnabled === undefined ? true : res.data.captchaEnabled;
+        if (captchaEnabled.value) {
+            codeUrl.value = "data:image/gif;base64," + res.data.img;
+            loginForm.value.uuid = res.data.uuid;
+        }
+    });
 }
 
 getCode();

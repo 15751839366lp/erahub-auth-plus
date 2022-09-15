@@ -41,6 +41,7 @@
         </div>
       </el-form-item>
       <el-checkbox v-model="loginForm.rememberMe" style="margin:0px 0px 25px 0px;">记住密码</el-checkbox>
+
       <el-form-item style="width:100%;">
         <el-button
           :loading="loading"
@@ -57,10 +58,7 @@
         </div>
       </el-form-item>
     </el-form>
-    <!--  底部  -->
-    <div class="el-login-footer">
-      <span>Copyright © 2018-2022 erahub.vip All Rights Reserved.</span>
-    </div>
+
   </div>
 </template>
 
