@@ -90,6 +90,7 @@ public class SysOssConfigServiceImpl implements ISysOssConfigService {
         return setConfigCache(baseMapper.insert(config) > 0, config);
     }
 
+    //todo 如果IP变化，更新所有对应配置的文件存储地址的IP
     @Override
     public Boolean updateByBo(SysOssConfigBo bo) {
         SysOssConfig config = BeanUtil.toBean(bo, SysOssConfig.class);
