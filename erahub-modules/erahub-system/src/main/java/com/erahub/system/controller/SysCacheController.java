@@ -13,6 +13,7 @@ import com.erahub.system.domain.SysCache;
 import lombok.RequiredArgsConstructor;
 import org.redisson.spring.data.connection.RedissonConnectionFactory;
 import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -23,6 +24,7 @@ import java.util.stream.Collectors;
  *
  * @author Lion Li
  */
+@Validated
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/cache")

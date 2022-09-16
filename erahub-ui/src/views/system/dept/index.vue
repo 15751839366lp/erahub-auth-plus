@@ -245,15 +245,19 @@ function toggleExpandAll() {
 }
 /** 修改按钮操作 */
 function handleUpdate(row) {
-  reset();
-  listDeptExcludeChild(row.deptId).then(response => {
-    deptOptions.value = proxy.handleTree(response.data, "deptId");
-  });
-  getDept(row.deptId).then(response => {
-    form.value = response.data;
-    open.value = true;
-    title.value = "修改部门";
-  });
+    reset();
+    getDept(row.deptId).then(response => {
+        form.value = response.data;
+        open.value = true;
+        title.value = "修改部门";
+        listDeptExcludeChild(row.deptId).then(response => {
+            deptOptions.value = proxy.handleTree(response.data, "deptId");
+            if (deptOptions.value.length == 0) {
+                const noResultsOptions = { deptId: proxy.form.parentId, deptName: proxy.form.parentName, children: [] };
+                deptOptions.value.push(noResultsOptions);
+            }
+        });
+    });
 }
 /** 提交按钮 */
 function submitForm() {

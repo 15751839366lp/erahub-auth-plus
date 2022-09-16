@@ -194,18 +194,18 @@ getCookie();
     vertical-align: middle;
   }
 }
-.el-login-footer {
-  height: 40px;
-  line-height: 40px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  font-family: Arial;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
+//.el-login-footer {
+//  height: 40px;
+//  line-height: 40px;
+//  position: fixed;
+//  bottom: 0;
+//  width: 100%;
+//  text-align: center;
+//  color: #fff;
+//  font-family: Arial;
+//  font-size: 12px;
+//  letter-spacing: 1px;
+//}
 .login-code-img {
   height: 40px;
   padding-left: 12px;
