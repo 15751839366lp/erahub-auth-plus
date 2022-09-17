@@ -44,8 +44,10 @@ services:
       JVM_XMN: 256m   #-Xmn default :512m
       #JVM_MS: 8m     #-XX:MetaspaceSize default :128m
       #JVM_MMS: 8m    #-XX:MaxMetaspaceSize default :320
+      #鉴权
+      #NACOS_AUTH_ENABLE: true
       SPRING_DATASOURCE_PLATFORM: mysql
-      MYSQL_SERVICE_HOST: 127.0.0.1
+      MYSQL_SERVICE_HOST: 172.17.228.8
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
       MYSQL_SERVICE_PASSWORD: erahub123

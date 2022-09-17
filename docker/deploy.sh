@@ -8,6 +8,8 @@ usage() {
 
 #开启所需端口(生产环境不推荐开启)
 port(){
+    # web 端口
+    firewall-cmd --add-port=80/tcp --permanent
     # mysql 端口
     firewall-cmd --add-port=3306/tcp --permanent
     # redis 端口
