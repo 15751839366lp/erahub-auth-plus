@@ -150,15 +150,15 @@
                   <th class="el-table__cell is-leaf"><div class="cell">已用百分比</div></th>
                 </tr>
               </thead>
-              <tbody v-if="server.sysFiles">
-                <tr v-for="(sysFile, index) in server.sysFiles" :key="index">
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.dirName }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.sysTypeName }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.typeName }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.total }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.free }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFile.used }}</div></td>
-                  <td class="el-table__cell is-leaf"><div class="cell" :class="{'text-danger': sysFile.usage > 80}">{{ sysFile.usage }}%</div></td>
+              <tbody v-if="server.sysFileInfos">
+                <tr v-for="(sysFileInfo, index) in server.sysFileInfos" :key="index">
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.dirName }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.sysTypeName }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.typeName }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.total }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.free }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell">{{ sysFileInfo.used }}</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell" :class="{'text-danger': sysFileInfo.usage > 80}">{{ sysFileInfo.usage }}%</div></td>
                 </tr>
               </tbody>
             </table>
