@@ -15,11 +15,11 @@
         <module>erahub-resource</module>
     </modules>
 
-    <artifactId>erahub-modules</artifactId>
+    <artifactId>erahub-modules-base</artifactId>
     <packaging>pom</packaging>
 
     <description>
-        erahub-modules业务模块
+        erahub-modules-base业务模块
     </description>
 
     <dependencies>

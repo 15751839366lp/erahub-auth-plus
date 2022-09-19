@@ -4,20 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.erahub</groupId>
-        <artifactId>erahub-modules</artifactId>
+        <artifactId>erahub-modules-base</artifactId>
         <version>1.2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>erahub-resource</artifactId>
+    <artifactId>erahub-gen</artifactId>
 
     <description>
-        erahub-resource资源服务
+        erahub-gen代码生成
     </description>
 
     <dependencies>
 
-        <!-- SpringCloud Alibaba Nacos -->
+    	<!-- SpringCloud Alibaba Nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -35,21 +35,43 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
-        <!-- Mysql Connector -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
         <!-- SpringBoot Actuator -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+        <!-- Apache Velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
+
+        <!-- Mysql Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- erahub Common Log -->
+        <dependency>
+            <groupId>com.erahub</groupId>
+            <artifactId>erahub-common-log</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.erahub</groupId>
             <artifactId>erahub-common-doc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.erahub</groupId>
+            <artifactId>erahub-common-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.erahub</groupId>
+            <artifactId>erahub-common-mybatis</artifactId>
         </dependency>
 
         <dependency>
@@ -60,58 +82,6 @@
         <dependency>
             <groupId>com.erahub</groupId>
             <artifactId>erahub-common-seata</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-log</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-oss</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-mail</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-sms</artifactId>
-        </dependency>
-
-        <!-- 短信 用哪个导入哪个依赖 -->
-<!--        <dependency>-->
-<!--            <groupId>com.aliyun</groupId>-->
-<!--            <artifactId>dysmsapi20170525</artifactId>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.tencentcloudapi</groupId>-->
-<!--            <artifactId>tencentcloud-sdk-java</artifactId>-->
-<!--        </dependency>-->
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-common-mybatis</artifactId>
-        </dependency>
-
-        <!-- erahub Api System -->
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-api-system</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.erahub</groupId>
-            <artifactId>erahub-api-resource</artifactId>
         </dependency>
 
     </dependencies>

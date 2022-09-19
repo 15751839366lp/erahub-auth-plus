@@ -47,7 +47,7 @@ services:
       #鉴权
       #NACOS_AUTH_ENABLE: true
       SPRING_DATASOURCE_PLATFORM: mysql
-      MYSQL_SERVICE_HOST: 172.17.228.8
+      MYSQL_SERVICE_HOST: 192.168.56.10
       MYSQL_SERVICE_PORT: 3306
       MYSQL_SERVICE_USER: root
       MYSQL_SERVICE_PASSWORD: erahub123
@@ -266,6 +266,26 @@ services:
       - "9300:9300"
     volumes:
       # 配置文件
+      - /docker/erahub-resource/logs/:/erahub/resource/logs
+    privileged: true
+    network_mode: "host"
+
+  erahub-system-gen-job-resource:
+    image: erahub/erahub-system-gen-job-resource:1.2.0
+    container_name: erahub-system-gen-job-resource
+    environment:
+      # 时区上海
+      TZ: Asia/Shanghai
+    ports:
+      - "9201:9201"
+      - "9202:9202"
+      - "9203:9203"
+      - "9300:9300"
+    volumes:
+      # 配置文件
+      - /docker/erahub-system/logs/:/erahub/system/logs
+      - /docker/erahub-gen/logs/:/erahub/gen/logs
+      - /docker/erahub-job/logs/:/erahub/job/logs
       - /docker/erahub-resource/logs/:/erahub/resource/logs
     privileged: true
     network_mode: "host"

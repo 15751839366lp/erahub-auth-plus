@@ -103,12 +103,22 @@ monitor(){
 
 #启动程序模块
 start(){
-    docker-compose up -d erahub-gateway erahub-gen erahub-auth erahub-system erahub-resource
+    docker-compose up -d erahub-gateway erahub-auth erahub-gen erahub-job erahub-system erahub-resource
+}
+
+#启动轻量程序模块
+startsimple(){
+    docker-compose up -d erahub-gateway erahub-auth erahub-system-gen-job-resource
 }
 
 #停止程序模块
 stop(){
-    docker-compose stop erahub-gateway erahub-gen erahub-auth erahub-system erahub-resource
+    docker-compose stop erahub-gateway erahub-gen erahub-auth erahub-job erahub-system erahub-resource
+}
+
+#停止轻量程序模块
+stopsimple(){
+    docker-compose stop erahub-gateway erahub-auth erahub-system-gen-job-resource
 }
 
 #关闭所有模块
@@ -143,8 +153,14 @@ case "$1" in
 "start")
     start
 ;;
+"startsimple")
+    startsimple
+;;
 "stop")
     stop
+;;
+"stopsimple")
+    stopsimple
 ;;
 "stopall")
     stopall

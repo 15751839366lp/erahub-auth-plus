@@ -4,9 +4,9 @@
       <el-col :sm="24" :lg="12" style="padding-left: 20px">
         <h2>Erahub-Plus-Auth后台管理系统</h2>
         <p>
-            Erahub-Plus-Auth 微服务通用权限管理系统 重写 erahub-Cloud 全方位升级(不兼容原框架)
+            Erahub-Plus-Auth 微服务通用权限管理系统
           <br/>
-          * 前端开发框架 Vue、Element UI<br/>
+          * 前端开发框架 Vue3、Element PLUS<br/>
           * 后端开发框架 Spring Boot<br/>
           * 微服务开发框架 Spring Cloud、Spring Cloud Alibaba<br/>
           * 容器框架 Undertow 基于 XNIO 的高性能容器<br/>
@@ -77,9 +77,9 @@
           <el-col :span="6">
             <h4>前端技术</h4>
             <ul>
-              <li>Vue</li>
+              <li>Vue3</li>
               <li>Vuex</li>
-              <li>Element-ui</li>
+              <li>Element-plus</li>
               <li>Axios</li>
               <li>Echarts</li>
               <li>Quill</li>
@@ -96,7 +96,7 @@
 <script setup name="Index">
 const version = ref('1.2.0')
 
-function goTarget(url) {
+function goTarget(url) {3
   window.open(url, '__blank')
 }
 </script>

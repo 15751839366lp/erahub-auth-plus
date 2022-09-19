@@ -340,7 +340,7 @@
         <module>erahub-auth</module>
         <module>erahub-gateway</module>
         <module>erahub-visual</module>
-        <module>erahub-modules</module>
+        <module>erahub-modules-base</module>
         <module>erahub-api</module>
         <module>erahub-common</module>
         <module>erahub-example</module>
