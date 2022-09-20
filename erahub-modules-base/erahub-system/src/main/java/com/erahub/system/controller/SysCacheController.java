@@ -44,6 +44,9 @@ public class SysCacheController {
         CACHES.add(new SysCache(CacheConstants.RATE_LIMIT_KEY, "限流处理"));
         CACHES.add(new SysCache(CacheConstants.SYS_OSS_CONFIG_KEY, "OSS配置"));
         CACHES.add(new SysCache(CacheConstants.PWD_ERR_CNT_KEY, "密码错误次数"));
+        CACHES.add(new SysCache(CacheNames.SYS_CONFIG, "配置信息"));
+        CACHES.add(new SysCache(CacheNames.SYS_DICT, "数据字典"));
+        CACHES.add(new SysCache(CacheNames.SYS_OSS_CONFIG, "OSS配置"));
     }
 
     /**
