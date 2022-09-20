@@ -47,6 +47,10 @@ public interface CacheConstants {
      */
     String RATE_LIMIT_KEY = "rate_limit:";
 
+    /**
+     * OSS配置 redis key
+     */
+    String SYS_OSS_CONFIG_KEY = "sys_oss_config:";
 
     /**
      * 登录账户密码错误次数 redis key
