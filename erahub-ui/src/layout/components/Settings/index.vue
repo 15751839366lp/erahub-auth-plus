@@ -1,5 +1,5 @@
 <template>
-  <el-drawer v-model="showSettings" :withHeader="false" direction="rtl" size="300px">
+  <el-drawer v-model="showSettings" :withHeader="false" :close-on-click-modal="true" direction="rtl" size="300px">
     <div class="setting-drawer-title">
       <h3 class="drawer-title">主题风格设置</h3>
     </div>
@@ -163,7 +163,6 @@ function saveSetting() {
   };
   localStorage.setItem("layout-setting", JSON.stringify(layoutSetting));
   setTimeout(proxy.$modal.closeLoading(), 1000)
-  showSettings.value = false;
 }
 function resetSetting() {
   proxy.$modal.loading("正在清除设置缓存并刷新，请稍候...");
