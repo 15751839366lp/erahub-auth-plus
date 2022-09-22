@@ -43,7 +43,8 @@
               <thead>
                 <tr>
                   <th class="el-table__cell is-leaf"><div class="cell">属性</div></th>
-                  <th class="el-table__cell is-leaf"><div class="cell">内存</div></th>
+                  <th class="el-table__cell is-leaf"><div class="cell">Mem</div></th>
+                  <th class="el-table__cell is-leaf"><div class="cell">Swap</div></th>
                   <th class="el-table__cell is-leaf"><div class="cell">JVM</div></th>
                 </tr>
               </thead>
@@ -51,21 +52,25 @@
                 <tr>
                   <td class="el-table__cell is-leaf"><div class="cell">总内存</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.mem">{{ server.mem.total }}G</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell" v-if="server.swap">{{ server.swap.total }}G</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.jvm">{{ server.jvm.total }}M</div></td>
                 </tr>
                 <tr>
                   <td class="el-table__cell is-leaf"><div class="cell">已用内存</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.mem">{{ server.mem.used}}G</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell" v-if="server.swap">{{ server.swap.used}}G</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.jvm">{{ server.jvm.used}}M</div></td>
                 </tr>
                 <tr>
                   <td class="el-table__cell is-leaf"><div class="cell">剩余内存</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.mem">{{ server.mem.free }}G</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell" v-if="server.swap">{{ server.swap.free }}G</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.jvm">{{ server.jvm.free }}M</div></td>
                 </tr>
                 <tr>
                   <td class="el-table__cell is-leaf"><div class="cell">使用率</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.mem" :class="{'text-danger': server.mem.usage > 80}">{{ server.mem.usage }}%</div></td>
+                  <td class="el-table__cell is-leaf"><div class="cell" v-if="server.swap" :class="{'text-danger': server.swap.usage > 80}">{{ server.swap.usage }}%</div></td>
                   <td class="el-table__cell is-leaf"><div class="cell" v-if="server.jvm" :class="{'text-danger': server.jvm.usage > 80}">{{ server.jvm.usage }}%</div></td>
                 </tr>
               </tbody>
