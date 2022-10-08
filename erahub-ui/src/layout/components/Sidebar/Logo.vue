@@ -25,7 +25,7 @@ defineProps({
   }
 })
 
-const title = ref('Erahub-Plus-Auth');
+const title = ref('Erahub-Auth-Plus');
 const settingsStore = useSettingsStore();
 const sideTheme = computed(() => settingsStore.sideTheme);
 </script>

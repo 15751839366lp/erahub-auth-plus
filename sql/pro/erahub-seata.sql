@@ -11,7 +11,7 @@
  Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 29/09/2022 18:04:43
+ Date: 08/10/2022 08:58:37
 */
 
 SET NAMES utf8mb4;
@@ -55,10 +55,10 @@ CREATE TABLE `distributed_lock`  (
 -- ----------------------------
 -- Records of distributed_lock
 -- ----------------------------
-INSERT INTO `distributed_lock` VALUES ('AsyncCommitting', ' ', 0);
-INSERT INTO `distributed_lock` VALUES ('RetryCommitting', ' ', 0);
-INSERT INTO `distributed_lock` VALUES ('RetryRollbacking', ' ', 0);
-INSERT INTO `distributed_lock` VALUES ('TxTimeoutCheck', ' ', 0);
+INSERT INTO `distributed_lock` VALUES ('AsyncCommitting', '172.17.228.8:8091', 1665190592746);
+INSERT INTO `distributed_lock` VALUES ('RetryCommitting', '172.17.228.8:8091', 1665190592659);
+INSERT INTO `distributed_lock` VALUES ('RetryRollbacking', '172.17.228.8:8091', 1665190592413);
+INSERT INTO `distributed_lock` VALUES ('TxTimeoutCheck', '172.17.228.8:8091', 1665190592840);
 INSERT INTO `distributed_lock` VALUES ('UndologDelete', ' ', 0);
 
 -- ----------------------------
